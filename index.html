@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="正在作业中 · · · · · · ">
+<meta name="theme-color" content="#000">
+<title>LXM&#39;s Blog</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1672238129366">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/purple/pace-theme-corner-indicator.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>LXM&#39;s Blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://LXMplus.github.io/post/python" target="_self">
+                  <i class="fa fa-globe"></i> Python
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  <i class="fa fa-globe"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  <i class="fa fa-globe"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about" target="_self">
+                  <i class="fa fa-globe"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友链
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout gemini ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">晓威明智</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">正在作业中 · · · · · ·</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://LXMplus.github.io/post/404.html">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu/"> 表达式和运算符 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2022-12-24 21:10:34">2022-12-24</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://LXMplus.github.io/tag/XzGN8EjbG/">
+        <span>Python</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >11<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >2515<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h3 id="表达式的组成">表达式的组成</h3>
+<p>表达式是可以计算的代码片段，由操作数和运算符构成。操作数、运算符和圆括号按一定的规则组成表达式。<strong>表达式通过运算后产生运算结果，返回结果对象</strong>。运算结果对象的类型由操作数和运算符共同决定。运算符表明对操作数进行什么样的运算。运算符包括<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>等。操作数包括文本常量(没有名称的常数值，例如1、&quot;abc&quot;)、变量(例如i=123)、类的成员变量/函数(例如math.pi、math. sin(x))等，也可以包含子表达式(例如(2**10))。</p>
+<p>表达式既可以非常简单，也可以非常复杂。当表达式包含多个运算符时，运算符的优先级控制各个运算符的计算顺序。例如，表达式<code>x+y*z</code>按<code>x+(y*z)</code>计算，因为<code>*</code>运算符的优先级高于<code>+</code>运算符。</p>
+
+                
+                  <!-- 自动摘要出来的内容有<code则补上结尾,防止格式错误 -->
+                  </code></pre>
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju/"> 变量和赋值语句 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2022-12-24 19:32:03">2022-12-24</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://LXMplus.github.io/tag/XzGN8EjbG/">
+        <span>Python</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >4<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >1004<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><p>计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。计算机程序处理的数据必须放入内存。机器语言和汇编语言直接通过内存地址访问这些数据，而高级语言则通过内存单元命名(即变量)来访问这些数据。</p>
+<blockquote>
+<p>在Python 3中一切皆为对象。对象是某个类(类型)的实例，对象由唯一的id标识。对象可以通过标识符来引用，对象引用即指向具体对象实例的标识符，也称之为“变量”。</p>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze/"> 标识符及其命名规则 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2022-12-24 16:52:01">2022-12-24</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://LXMplus.github.io/tag/XzGN8EjbG/">
+        <span>Python</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >3<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >574<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><p>在Python语言中，包、模块、类、函数、变量等的名称必须为有效的标识符。</p>
+<h3 id="标识符">标识符</h3>
+<p>标识符是变量、函数、类、模块和其他对象的名称。标识符的第一个字符必须是字母、下画线(“<code>_</code>”)，其后的字符可以是字母、下画线或数字。一些特殊的名称，例如if、for等，作为Python语言的保留关键字，不能作为标识符。例如，a_int、a_float、str1、_strname、func1为正确的变量名；而99var、It'sOK、for(关键字)为错误的变量名。</p>
+
+                
+                  <!-- 自动摘要出来的内容有<code则补上结尾,防止格式错误 -->
+                  </code></pre>
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong/"> Python对象和引用 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2022-12-24 16:45:58">2022-12-24</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://LXMplus.github.io/tag/XzGN8EjbG/">
+        <span>Python</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >11<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >2907<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h3 id="python对象概述">Python对象概述</h3>
+<p>计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。<strong>在Python语言中，数据表示为对象</strong>。对象本质上是一个内存块，拥有特定的值，支持特定类型的运算操作。在Python3中，一切皆为对象。Python语言中的每个对象由标识(identity)、类型(type)和值(value)标识。</p>
+<p>(1)<strong>标识</strong>用于唯一地标识一个对象，通常对应对象在计算机内存中的位置。使用内置函数id(obj1)可以返回对象obj1的标识。</p>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://LXMplus.github.io/post/python/"> Python Catalogue </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-01-01 17:05:04">2020-01-01</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://LXMplus.github.io/tag/XzGN8EjbG/">
+        <span>Python</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >53<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><figure data-type="image" tabindex="1"><img src="https://LXMplus.github.io/post-images/1671879732677.png" alt="" loading="lazy"></figure>
+<h3 id="语言基础">语言基础</h3>
+<h4 id="python对象和引用"><a href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong">Python对象和引用</a></h4>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://LXMplus.github.io/post/python/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      已运行:<span id="run_time"></span>
+    </center>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      BirthDay = new Date('');
+      if (BirthDay.getTime()) {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+      }
+    </script>
+    <div class="poweredby">
+      
+    </div>
+  </footer>
+  
+    
+        <div class="gemini back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+                  
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "true";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu/"" data-c="
+          &lt;h3 id=&#34;表达式的组成&#34;&gt;表达式的组成&lt;/h3&gt;
+&lt;p&gt;表达式是可以计算的代码片段，由操作数和运算符构成。操作数、运算符和圆括号按一定的规则组成表达式。&lt;strong&gt;表达式通过运算后产生运算结果，返回结果对象&lt;/strong&gt;。运算结果对象的类型由操作数和运算符共同决定。运算符表明对操作数进行什么样的运算。运算符包括&lt;code&gt;+&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;、&lt;code&gt;*&lt;/code&gt;、&lt;code&gt;/&lt;/code&gt;等。操作数包括文本常量(没有名称的常数值，例如1、&amp;quot;abc&amp;quot;)、变量(例如i=123)、类的成员变量/函数(例如math.pi、math. sin(x))等，也可以包含子表达式(例如(2**10))。&lt;/p&gt;
+&lt;p&gt;表达式既可以非常简单，也可以非常复杂。当表达式包含多个运算符时，运算符的优先级控制各个运算符的计算顺序。例如，表达式&lt;code&gt;x+y*z&lt;/code&gt;按&lt;code&gt;x+(y*z)&lt;/code&gt;计算，因为&lt;code&gt;*&lt;/code&gt;运算符的优先级高于&lt;code&gt;+&lt;/code&gt;运算符。&lt;/p&gt;
+&lt;p&gt;【实例】表达式示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import math           #导入math模块
+a = 2;b = 10          #变量a指向int对象2,变量b指向int对象10
+a+b                   #输出:12
+math.pi               #输出:3.141592653589793
+math.sin(math.pi/2)   #输出1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;表达式的书写规则&#34;&gt;表达式的书写规则&lt;/h3&gt;
+&lt;p&gt;Python表达式遵循下列书写规则。&lt;/p&gt;
+&lt;p&gt;(1)表达式从左到右在同一个基准上书写。例如，数学公式 a2+b2 应该写为 。a&lt;strong&gt;2+b&lt;/strong&gt;2。&lt;/p&gt;
+&lt;p&gt;(2)乘号不能省略。例如，数学公式ab(表示a乘以b)应写为a*b。&lt;/p&gt;
+&lt;p&gt;(3)括号必须成对出现，而且只能使用圆括号；圆括号可以嵌套使用。&lt;/p&gt;
+&lt;p&gt;【实例】复杂表达式示例。数学表达式 1/2sin⁡[a(x+1)+b] 写成Python表达式为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;math.sin(a*(x+1)+b)/2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;运算符概述&#34;&gt;运算符概述&lt;/h3&gt;
+&lt;p&gt;Python运算符用于在表达式中对一个或多个操作数进行计算并返回结果值，接受一个操作数的运算符被称作一元运算符，例如正负号运算符&lt;code&gt;+&lt;/code&gt;或&lt;code&gt;-&lt;/code&gt;；接受两个操作数的运算符被称作二元运算符，例如算术运算符&lt;code&gt;+&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;、&lt;code&gt;*&lt;/code&gt;、&lt;code&gt;/&lt;/code&gt;等。如果一个表达式中包含多个运算符，则计算顺序取决于运算符的结合顺序和优先级。优先级高的运算符优先计算，例如，在1+2*3中*的优先级比+高，故先计算2*3。同一优先级的运算符按结合顺序依次计算，例如+、-(以及*、/)为同一优先级左结合的运算符，故1+2-3等同于(1+2)-3；2*4/2等同于(2*4)/2。注意，&lt;strong&gt;赋值运算符=为右结合运算符&lt;/strong&gt;，故a=b=c等同于a=(b=c)。用户可以使用圆括号“&lt;code&gt;()&lt;/code&gt;”强制改变运算顺序。&lt;/p&gt;
+&lt;p&gt;【实例】表达式中运算符的优先级示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;11 + 22 * 3      #输出:77
+(11 + 22) * 3    #输出:99
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;python运算符&#34;&gt;Python运算符&lt;/h3&gt;
+&lt;p&gt;Python语言定义了许多运算符，按优先顺序排列如表所示。通过运算符重载(overload)可以为用户自定义的类型定义新的运算符。&lt;/p&gt;
+&lt;h4 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相加&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a + b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a - b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相乘&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a * b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相除&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a / b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取模&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a % b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a**b 表示 a 的 b 次幂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;//&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取整除&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9 // 4 结果为 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;比较运算符&#34;&gt;比较运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;==&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否相等&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a == b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;!=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否不等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a != b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否大于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;gt; b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否小于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a&amp;lt;b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否大于等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;gt;= b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否小于等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;lt;= b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;赋值运算符&#34;&gt;赋值运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;简单的赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a = b + c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a += b 等效于 a = a + b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;减法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a -= b 等效于 a = a - b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;乘法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a *= b 等效于 a = a * b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;除法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a /= b 等效于 a = a / b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取模赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a %= b 等效于 a = a % b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a **= b 等效于 a = a ** b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;//=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取整除赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a //= b 等效于 a = a // b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;逻辑运算符&#34;&gt;逻辑运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;and&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型与&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a and b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;or&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型或&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a or b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型非&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;位运算符&#34;&gt;位运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;按位与运算符。参与运算的两个值，如果两个相应位都为1，那么该位的结果就为1，否则为0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;60&amp;amp;13输出结果为12，二进制为0000 1100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;|&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;按位或运算符。只要对应的两个二进制位有一个为1，结果就为1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;60|13输出结果为61，二进制为0011 1101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;^&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;按位异或运算符。当两个二进制位相异时，结果为1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;60^13输出结果为49，二进制为0011 0001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;按位取反运算符。对数据的每个二进制位取反，即把1变为0，把0变为1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~60输出结果为-61，二进制为1100 0011&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;左移动运算符。将二进制位全部左移若干位，由&amp;quot;&amp;lt;&amp;lt;&amp;quot;右边的数指定移动的位数，高位丢弃，低位补0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;60&amp;lt;&amp;lt;2输出结果为240，二进制为1111 0000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;右移动运算符。将二进制位全部右移若干位，由&amp;quot;&amp;gt;&amp;gt;&amp;quot;右边的数指定移动的位数，移动过程中，正数最高位补0，负数最高位补1，无符号数最高位补0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;60&amp;gt;&amp;gt;2输出结果为15，二进制为0000 1111&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;成员运算符&#34;&gt;成员运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;in&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果在指定的序列（元组或列表）中找到值，就返回True，否则返回False&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;若x在y序列（元组或列表）中，则返回True，否则返回False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not in&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果在指定的序列（元组或列表）中没有找到值，就返回True，否则返回False&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;若x在y序列（元组或列表）中，则返回False，否则返回True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = &#39;hello world&#39;
+y = [1,2,3,4]
+print(&#39;in运算符:&#39;,&#39;hello&#39; in x)
+print(&#39;not in运算符:&#39;,2 not in y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【程序运行结果如下】&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;in运算符: True
+not in运算符: False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;身份运算符&#34;&gt;身份运算符&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;判断两个标识符是否引用同一个对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a is b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;is not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;判断两个标识符是否引用不同对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a is not b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = 10
+y = 10
+print(&#39;is运算符:&#39;,x is y)
+y = 20
+print(&#39;not is运算符:&#39;,x is not y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【程序运行结果如下】&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;is运算符: True
+not is运算符: True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述（由上至下对应优先级由高到低）&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂运算&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~ + -&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取反、正号、负号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*  /  %  //&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;乘、除、取模、取整除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+ -&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加法、减法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;右移、左移&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;与&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;^|&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;异或、或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;= &amp;lt; &amp;gt; &amp;gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;比较运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;== !=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否等于、是否不等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;=  %= /=  //=  -=  +=  *=  **=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;赋值运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;is is not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;身份运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;in not in&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;成员运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not and or&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;逻辑运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相加&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a + b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a - b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相乘&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a * b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相除&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a / b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取模&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a % b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a**b 表示 a 的 b 次幂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;//&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取整除&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9 // 4 结果为 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;==&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否相等&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a == b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;!=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否不等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a != b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否大于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;gt; b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否大于等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;gt;= b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否小于等于&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;lt;= b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;简单的赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a = b + c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a += b 等效于 a = a + b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;减法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a -= b 等效于 a = a - b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;乘法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a *= b 等效于 a = a * b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;除法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a /= b 等效于 a = a / b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取模赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a %= b 等效于 a = a % b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a **= b 等效于 a = a ** b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;//=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取整除赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a //= b 等效于 a = a // b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;与&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;amp; b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;^&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;异或&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a ^ b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取反&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;左移动&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;lt;&amp;lt; 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;右移动&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a &amp;gt;&amp;gt; 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;and&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型与&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a and b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;or&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型或&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a or b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;布尔类型非&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;判断两个标识符是否引用同一个对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a is b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;is not&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;判断两个标识符是否引用不同对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a is not b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;混合运算和数值类型转换&#34;&gt;混合运算和数值类型转换&lt;/h3&gt;
+&lt;h4 id=&#34;隐式转换&#34;&gt;隐式转换&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;int、float和complex对象可以进行混合运算&lt;/strong&gt;。如果表达式中包含complex对象，则其他对象自动转换(隐式转换)为complex对象，结果为complex对象；如果表达式中包含float对象，则其他对象自动转换(隐式转换)为float对象，结果为float对象。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】隐式类型转换示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;f=123+1.23
+f             #输出:124.23
+type(f)       #输出:&amp;lt;class&#39;float&#39;&amp;gt;
+123+True      #True转换为1.输出:124
+123+False     #False转换为0.输出:123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;！！！注意&lt;/strong&gt;：在混合运算中True自动转换为1， False自动转换为0。&lt;/p&gt;
+&lt;h4 id=&#34;显式转换&#34;&gt;显式转换&lt;/h4&gt;
+&lt;p&gt;“显式转换”又称为“强制转换”，使用target-type(value)将表达式强制转换为所需的数据类型。如果未定义相应的转换运算符，则强制转换会失败。显式转换实际上使用目标类型的构造函数创建其对象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;int(x)、float(x)、bool(x)、str(x)分别把对象转换为整数、浮点数、布尔值和字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;【实例】显式类型转换示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;int(1.23)       #输出:1
+float(10)       #输出:10.0
+bool(&amp;quot;abc&amp;quot;)     #输出:True
+float(&amp;quot;123xyz&amp;quot;) #报错.ValueError:could not convert string to float:&#39;123xyz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显式数值转换可能导致精度损失，也可能引发异常(例如OverflowError)。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;i=9999**9999
+float(i)   #报错.OverflowError:long int too large to convert to float
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【实例】数值数据类型示例(profit.py):计算复利。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;nb=float(input(&amp;quot;请输入本金:&amp;quot;))         #输入本金并转换为浮点数
+nr=float(input(&amp;quot;请输入年利率:&amp;quot;))       #输入年利率并转换为浮点数
+ny=int(input(&amp;quot;请输入年数:&amp;quot;))           #输入年数并转换为整数
+amount= nb * (1+nr/100) ** ny        #计算复利
+print(&amp;quot;本金利率和为:%0.2f&amp;quot;%amount)     #输出复利，保留两位小数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【程序运行结果如下】&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;请输入本金:1000
+请输入年利率：6
+请输入年数：10
+本金利率和为:1790.85
+&lt;/code&gt;&lt;/pre&gt;
+">表达式和运算符</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju/"" data-c="
+          &lt;p&gt;计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。计算机程序处理的数据必须放入内存。机器语言和汇编语言直接通过内存地址访问这些数据，而高级语言则通过内存单元命名(即变量)来访问这些数据。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在Python 3中一切皆为对象。对象是某个类(类型)的实例，对象由唯一的id标识。对象可以通过标识符来引用，对象引用即指向具体对象实例的标识符，也称之为“变量”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;变量的声明和赋值&#34;&gt;变量的声明和赋值&lt;/h3&gt;
+&lt;p&gt;变量的声明和赋值用于把一个变量绑定到某个对象，其语法格式如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;变量名 = 字面量或表达式
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最简单的表达式是字面量，Python基于字面量的值创建一个对象，并绑定到变量；对于复杂的表达式， Python先求值表达式，然后返回表达式结果对象，并绑定到变量。&lt;/p&gt;
+&lt;p&gt;Python变量被访问之前必须初始化，即赋值(绑定到某个对象)，否则会报错。&lt;/p&gt;
+&lt;p&gt;【实例】变量的声明和赋值示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x=0;y=0;z=0         #变量x、y和z均指向int对象0
+str1 = &amp;quot;abc&amp;quot;        #变量strl指向值为&amp;quot;abc&amp;quot;的str型实例对象
+aFloat              #变量aFloat未声明和定义(NameError:name&#39;aFloat&#39;is not defined)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;链式赋值语句&#34;&gt;链式赋值语句&lt;/h3&gt;
+&lt;p&gt;链式赋值(chained assignment)的语句形式如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;变量1=变量2=表达式
+#**等价于**
+变量2=表达式
+变量1=变量2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;链式赋值用于多个变量赋同一个值：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = y = 123      #变量x和y均指向int对象123
+x                #输出：123
+y                #输出：123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;复合赋值语句&#34;&gt;复合赋值语句&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;实例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a += b 等价于 a = a + b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;减法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a -= b 等价于 a = a - b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;乘法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a *= b 等价于 a = a * b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;除法赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a /= b 等价于 a = a / b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;//=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;整除赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a //= b 等价于 a = a // b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;%=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;取余赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a %= b 等价于 a = a % b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;**=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;幂赋值运算符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;a **= b 等价于 a = a ** b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;删除变量&#34;&gt;删除变量&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户可以使用&lt;code&gt;del&lt;/code&gt;语句删除不在使用的变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】删除变量实例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = 1       #变量x指向int对象1
+del x       #删除变量x
+x           #变量x未声明和定义
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;序列解包赋值&#34;&gt;序列解包赋值&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python支持将序列数据类型解包为对应相同个数的变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】序列解包实例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a,b = 1,2       #变量a指向int对象1，变量b指向int对象2
+a               #输出：1
+b               #输出：2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;！！！注意&lt;/strong&gt;：变量的个数必须与序列的元素个数一致，否则会产生错误。例如，对于语句“&lt;code&gt;x,y=(1,2,3)&lt;/code&gt;”，由于右侧的元组序列包含3个元素，但是左侧只有两个变量，所以会产生错误。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;如果只需要解包部分值，则可以采用特殊变量“&lt;code&gt;_&lt;/code&gt;”。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;_, share, price, _=[&#39;ACME&#39;,50,102.11,(2018,8,21)]
+share           #输出:50
+price           #输出:102.11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【实例】使用序列解包实现变量交换。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a,b = (1,2)        #变量a指向int对象1,变量b指向int对象2
+a,b = b,a          #变量a和b的值进行交换
+a                  #输出:2
+b                  #输出:1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：在Python语言中，使用“&lt;code&gt;a,b=b,a&lt;/code&gt;”的语句方式可以实现两个变量的值的交换。&lt;/p&gt;
+&lt;h3 id=&#34;常量&#34;&gt;常量&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python语言不支持常量，即没有语法规则限制改变一个常量的值。Python语言使用约定，声明在程序运行过程中不会改变的变量为常量，通常使用全大写字母(可以使用下画线增加可阅读性)表示常量名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】常量示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;TAX_RATE=0.17      #浮点类型常量TAX_RATE
+PI = 3.14          #浮点类型常量PI
+ECNU=&#39;华东师范大学&#39;  #字符串常量ECNU
+&lt;/code&gt;&lt;/pre&gt;
+">变量和赋值语句</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze/"" data-c="
+          &lt;p&gt;在Python语言中，包、模块、类、函数、变量等的名称必须为有效的标识符。&lt;/p&gt;
+&lt;h3 id=&#34;标识符&#34;&gt;标识符&lt;/h3&gt;
+&lt;p&gt;标识符是变量、函数、类、模块和其他对象的名称。标识符的第一个字符必须是字母、下画线(“&lt;code&gt;_&lt;/code&gt;”)，其后的字符可以是字母、下画线或数字。一些特殊的名称，例如if、for等，作为Python语言的保留关键字，不能作为标识符。例如，a_int、a_float、str1、_strname、func1为正确的变量名；而99var、It&#39;sOK、for(关键字)为错误的变量名。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;！！！注意&lt;/strong&gt;：&lt;br&gt;
+(1) Python标识符区分大小写。例如：ABC和abc视为不同的名称。&lt;br&gt;
+(2)以双下画线开始和结束的名称通常具有特殊的含义。例如，&lt;code&gt;__init&lt;/code&gt;为类的构造函数，一般应避免使用。&lt;br&gt;
+(3)避免使用Python预定义标识符名作为自定义标识符名。例如， Notimplemented、Ellipsis、int、float、list、str、tuple等。&lt;/p&gt;
+&lt;h3 id=&#34;保留关键字&#34;&gt;保留关键字&lt;/h3&gt;
+&lt;p&gt;关键字即预定义保留标识符。关键字有特殊的语法含义。关键字不能在程序中用作标识符，否则会产生编译错误。Python 3的关键字如表所示。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;and&lt;/td&gt;
+&lt;td&gt;as&lt;/td&gt;
+&lt;td&gt;assert&lt;/td&gt;
+&lt;td&gt;break&lt;/td&gt;
+&lt;td&gt;class&lt;/td&gt;
+&lt;td&gt;continue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;def&lt;/td&gt;
+&lt;td&gt;del&lt;/td&gt;
+&lt;td&gt;elif&lt;/td&gt;
+&lt;td&gt;else&lt;/td&gt;
+&lt;td&gt;except&lt;/td&gt;
+&lt;td&gt;finally&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;for&lt;/td&gt;
+&lt;td&gt;from&lt;/td&gt;
+&lt;td&gt;global&lt;/td&gt;
+&lt;td&gt;if&lt;/td&gt;
+&lt;td&gt;import&lt;/td&gt;
+&lt;td&gt;in&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;is&lt;/td&gt;
+&lt;td&gt;lambda&lt;/td&gt;
+&lt;td&gt;nonlocal&lt;/td&gt;
+&lt;td&gt;not&lt;/td&gt;
+&lt;td&gt;or&lt;/td&gt;
+&lt;td&gt;pass&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;raise&lt;/td&gt;
+&lt;td&gt;return&lt;/td&gt;
+&lt;td&gt;try&lt;/td&gt;
+&lt;td&gt;while&lt;/td&gt;
+&lt;td&gt;with&lt;/td&gt;
+&lt;td&gt;yield&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;python预定义标识符&#34;&gt;Python预定义标识符&lt;/h3&gt;
+&lt;p&gt;Python语言中包含许多预定义内置类、异常、函数等，例如float、ArithmeticError、print 等。用户应该避免使用Python预定义标识符名作为自定义标识符名。&lt;/p&gt;
+&lt;p&gt;使用Python的内置函数&lt;code&gt;dir(__builtins__)&lt;/code&gt;可以查看所有内置的异常名、函数名等。&lt;/p&gt;
+&lt;h3 id=&#34;命名规则&#34;&gt;命名规则&lt;/h3&gt;
+&lt;p&gt;Python语言遵循的命名规则如表所示。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;类型&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;命名规则&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;举例&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;模块/包名&lt;/td&gt;
+&lt;td&gt;全小写字母，简单、有意义，如果需要可以使用下画线&lt;/td&gt;
+&lt;td&gt;math、sys&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;函数名&lt;/td&gt;
+&lt;td&gt;全小写字母，可以使用下画线增加可阅读性&lt;/td&gt;
+&lt;td&gt;foo()、my_func()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;变量名&lt;/td&gt;
+&lt;td&gt;全小写字母，可以使用下画线增加可阅读性&lt;/td&gt;
+&lt;td&gt;age、my_var&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;类名&lt;/td&gt;
+&lt;td&gt;采用PascalCase命名规则，即多个单词组成名称，每个单词除第一个字母大写外其余的字母均小写&lt;/td&gt;
+&lt;td&gt;MyClass&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;常量名&lt;/td&gt;
+&lt;td&gt;全大写字母，可以使用下画线增加可阅读性&lt;/td&gt;
+&lt;td&gt;LEFT、TAX_RATE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+">标识符及其命名规则</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong/"" data-c="
+          &lt;h3 id=&#34;python对象概述&#34;&gt;Python对象概述&lt;/h3&gt;
+&lt;p&gt;计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。&lt;strong&gt;在Python语言中，数据表示为对象&lt;/strong&gt;。对象本质上是一个内存块，拥有特定的值，支持特定类型的运算操作。在Python3中，一切皆为对象。Python语言中的每个对象由标识(identity)、类型(type)和值(value)标识。&lt;/p&gt;
+&lt;p&gt;(1)&lt;strong&gt;标识&lt;/strong&gt;用于唯一地标识一个对象，通常对应对象在计算机内存中的位置。使用内置函数id(obj1)可以返回对象obj1的标识。&lt;/p&gt;
+&lt;p&gt;(2)&lt;strong&gt;类型&lt;/strong&gt;用于表示对象所属的数据类型(类)，数据类型用于限定对象的取值范围以及允许执行的处理操作。使用内置函数type(obj1)可以返回对象obj1所属的数据类型。&lt;/p&gt;
+&lt;p&gt;(3)&lt;strong&gt;值&lt;/strong&gt;用于表示对象的数据类型的值。使用内置函数print(obj1)可以返回对象objl的值。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过内置的&lt;code&gt;type()&lt;/code&gt;函数可以判断一个&lt;strong&gt;对象的类型&lt;/strong&gt;。通过内置的&lt;code&gt;id()&lt;/code&gt;函数可以获取一个&lt;strong&gt;对象唯一的id标识&lt;/strong&gt;(CPython的实现为内存存放位置)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】 使用内置函数type()、id()和print()查看对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;123              #输出:123
+id(123)          #输出:140706558370656
+type(123)        #输出:&amp;lt;class&#39;int&#39;&amp;gt;
+print(123)       #输出:123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字面量123创建一个实例对象，其id标识为140706558370656，类型为int类型，值为123。在Python 3中&lt;strong&gt;函数&lt;/strong&gt;和&lt;strong&gt;类&lt;/strong&gt;等也是对象，也具有相应的类型和id。&lt;/p&gt;
+&lt;p&gt;【实例】 查看Python的内置函数对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;type(abs)         #输出:&amp;lt;class&#39;builtin function or method&#39;&amp;gt;
+id(abs)           #输出:2529313427104
+type(range)       #输出:&amp;lt;class&#39;type&#39;&amp;gt;
+id(range)         #输出:140706557885440
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用字面量创建实例对象&#34;&gt;使用字面量创建实例对象&lt;/h3&gt;
+&lt;p&gt;对于内置对象， Python通常提供使用字面量直接创建实例对象的语法。&lt;/p&gt;
+&lt;p&gt;Python的数据类型定义了一个值的集合，在Python代码中使用字面量表示某个数据类型的值。例如，12、101等表示int数据类型的值；0.17、3.14等表示float数据类型的值；True和False表示bool数据类型的值；&#39;Hello, World&#39;、&#39;张三&#39;等表示str数据类型的值。字面量在Python语句中解释为表达式， Python基于字面量创建相应的数据类型的对象。&lt;/p&gt;
+&lt;p&gt;【实例】 使用字面量创建实例对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;123      #输出:123
+&amp;quot;abc&amp;quot;    #输出:&#39;abc&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Python使用字面量123和“abc”分别创建一个int型对象和一个str型对象。&lt;/p&gt;
+&lt;h3 id=&#34;使用类对象创建实例对象&#34;&gt;使用类对象创建实例对象&lt;/h3&gt;
+&lt;p&gt;通过直接调用类对象可以创建实例对象，其语法格式如下。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;类对象(参数)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;【实例】使用类对象创建实例对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;int(12)       #输出:12
+complex(1,2)  #输出:(1+2j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Python使用int(12)创建一个整数数据类型的实例对象；使用complex(1,2)创建一个复数类型的实例对象。另外，表达式的运算结果也可以创建新的对象；Python语句&lt;strong&gt;def&lt;/strong&gt;会创建函数对象；&lt;strong&gt;class&lt;/strong&gt;语句会创建类对象。&lt;/p&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
+&lt;p&gt;在Python语言中，&lt;strong&gt;所有对象都有一个数据类型&lt;/strong&gt;。Python数据类型的定义为一个值的集合以及在这个值集上的一组运算操作。&lt;/p&gt;
+&lt;p&gt;例如整数数据类型(int)，其值的集合为所有的整数，支持的运算操作包括&lt;code&gt;+&lt;/code&gt;(加法)、&lt;code&gt;-&lt;/code&gt;(减法)、&lt;code&gt;*&lt;/code&gt;(乘法)、&lt;code&gt;//&lt;/code&gt;(整除)等，88、1024等都是整数类型数据。&lt;/p&gt;
+&lt;p&gt;每个对象存储一个值，例如， int类型的对象可以存储值1234、99或1333。&lt;strong&gt;不同的对象可以存储同一个值&lt;/strong&gt;，例如，一个str类型的对象可以存储值&lt;code&gt;&#39;hello&#39;&lt;/code&gt;，另一个str类型的对象也可以存储值&lt;code&gt;&#39;hello&#39;&lt;/code&gt;。在一个对象上可执行且只允许执行其对应数据类型定义的操作，例如，两个int对象可执行乘法运算，但两个str对象不允许执行乘法运算。&lt;/p&gt;
+&lt;p&gt;Python数据类型包括&lt;strong&gt;内置数据类型&lt;/strong&gt;和&lt;strong&gt;自定义数据类型&lt;/strong&gt;。Python语言提供了丰富的内置数据类型，用于有效地处理各种类型的数据。&lt;/p&gt;
+&lt;h3 id=&#34;变量和对象的引用&#34;&gt;变量和对象的引用&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Python对象&lt;/strong&gt;是位于计算机内存中的一个&lt;strong&gt;内存数据块&lt;/strong&gt;。为了引用对象，用户必须通过赋值语句把对象赋值给变量(也称之为把对象绑定到变量)。&lt;strong&gt;指向对象的引用即变量&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】 使用赋值语句把对象绑定到变量。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a=1     #字面量表达式1创建值为1的int型实例对象，并绑定到变量a
+b=2     #字面量表达式2创建值为2的int型实例对象，并绑定到变量b
+c=a+b   #表达式a+b创建值为3的int型实例对象，并绑定到变量c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Python使用字面量表达式1、2和表达式a+b创建3个整型对象，并使用赋值语句把3个对象分别绑定到变量a、b和c。字面量用于创建值为字面量的对象，即某个数据类型的实例对象；表达式使用运算符实现多个操作数(对象)的运算操作，并返回结果对象。&lt;strong&gt;用户可以把对象通过赋值语句赋值给一个变量，即把对象绑定到一个变量，注意变量名必须为有效的标识符&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在Python 3中，作为对象的函数和类等也可以通过变量引用&lt;/strong&gt;，但这样的引用一般意义不大，建议直接使用函数/类，以提高程序的可读性。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x=abs
+x(−123)                    #输出:123
+y=str
+id(y)                      #输出:140706557890640
+y.format(&#39;{0:.2f}&#39;,123)    #输出:&#39;123.00&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;python是动态类型语言&#34;&gt;Python是动态类型语言&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python是动态类型语言，即变量不需要显式声明数据类型。根据变量的赋值， Python解释器自动确定其数据类型。事实上，变量仅用于指向某个类型对象，因此变量可以不限定类型，即可以指向任何类型的对象。通过标识符和赋值运算符(&lt;code&gt;=&lt;/code&gt;)可以指定某个变量指向某个对象，即引用该对象。&lt;strong&gt;多个变量可以引用同一个对象，一个变量也可以改变指向其他的对象&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】变量的动态类型示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;type(123)      #输出:&amp;lt;class&#39;int&#39;&amp;gt;
+id(123)        #输出:140706558370656
+a = 123
+id(a)          #输出:140706558370656
+b = 123
+id(b)          #输出:140706558370656
+c = a
+id(c)          #输出:140706558370656
+id(&#39;abc&#39;)      #输出:2529314137232
+a = &#39;abc&#39;
+id(a)          #输出:2529314137232
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;123为类int的对象实例，其id为140706558370656；a=123,即变量a指向(引用)对象实例123，故其id也为140706558370656；b=123，即变量b也指向(引用)对象实例123，故其id也为140706558370656；c=a，变量c和变量a一样,指向(引用)对象实例123，其id同样为140706558370656。a=&#39;abc&#39;，变量a指向(引用)对象实例&#39;abc&#39;，其id为2529314137232。&lt;/p&gt;
+&lt;h3 id=&#34;python是强类型语言&#34;&gt;Python是强类型语言&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python是一种强类型语言，每个变量指向的对象均属于某个数据类型，即只支持该类型允许的运算操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】变量的强数据类型示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a=1           #a指向值为1的int型实例对象
+b= &amp;quot;11&amp;quot;       #b指向值为&amp;quot;11&amp;quot;的str型实例对象
+a+b           #错误：int型和str型对象不能直接相加，即str型对象不能自动转换为int型对象
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;对象内存示意图&#34;&gt;对象内存示意图&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python程序运行时会在内存中创建各种对象(位于堆内存中)，通过赋值语句可以将对象绑定到变量(位于栈内存中)，从而通过变量引用对象进行各种操作。&lt;strong&gt;多个变量可以引用同一个对象&lt;/strong&gt;。&lt;strong&gt;如果一个对象不再被任何有效作用域中的变量引用，则会通过自动垃圾回收机制回收该对象占用的内存&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】变量增量运算示例以及相应的对象内存示意图。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;i=100
+i=i+1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第1条语句，创建一个值为100的int对象，并绑定到变量i；第2条语句，先计算表达式i+1的值，然后创建一个值为101的int对象，并绑定到变量i。注意：在执行完第2条语句后，内存中存在3个int对象，即100、1和101，变量i引用对象101，其他两个对象没有被任何变量引用，将被自动垃圾回收器回收。&lt;/p&gt;
+&lt;p&gt;【实例】交换两个变量的示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a=123   #a指向值为123的int型实例对象
+b=456   #b指向值为456的int型实例对象
+t=a     #变量t和a一样，指向(引用)对象实例123
+a=b     #变量a和b一样，指向(引用)对象实例456
+b=t     #变量b和t一样，指向(引用)对象实例123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;对象的值比较和引用判别&#34;&gt;对象的值比较和引用判别&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过&lt;code&gt;==&lt;/code&gt;运算符可以判断两个变量指向的对象的值是否相同；通过&lt;code&gt;is&lt;/code&gt;运算符可以判断两个变量是否指向同一个对象。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】 对象的值比较(==)和引用判别(is)示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = &#39;abc&#39;      #x指向值为&amp;quot;abc&amp;quot;的str型实例对象
+y = x          #变量y和x一样，指向(引用)对象实例&amp;quot;abc&amp;quot;
+z = &#39;abcd&#39;     #z指向值为&amp;quot;abcd&amp;quot;的str型实例对象
+x == y         #输出:True
+x is y         #输出:True
+x == z         #输出:False
+x is z         #输出:False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;不可变对象和可变对象&#34;&gt;不可变对象和可变对象&lt;/h3&gt;
+&lt;p&gt;Python 3对象可以分为不可变对象(immutable)和可变对象(mutable)。&lt;/p&gt;
+&lt;p&gt;不可变对象一旦创建，其值就不能被修改；可变对象的值可以被修改。Python对象的可变性取决于其数据类型的设计，即是否允许改变其值。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python中的大部分对象都是不可变对象，例如bool、int、float、str、complex、tuple等。变量是指向某个对象的引用，多个变量可以指向同一个对象。给变量重新赋值，并不改变原始对象的值，只是创建一个新对象，并指向该变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例】 不可变对象示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;a = 18         #变量a指向int对象18
+id(a)          #输出:140706365363776.表示a指向的int对象18的id
+a = 25         #变量a指向int对象25
+id(a)          #输出:140706365364000.表示a指向的int对象25的id
+b = 25         #变量b指向int对象25
+id(b)          #输出:140706365364000.表示b指向的int对象25的id
+id(25)         #输出:140706365364000.表示int对象25的id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对象本身的值可以改变的对象称为可变对象(例如set、list、dict等)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【实例2.13】可变对象示例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;x = y = [1,2,3]    #变量x和y指向list对象[1,2,3]
+id(x)              #输出:1656936944328.表示变量x指向的list对象[1,2,3]的id
+id(y)              #输出:1656936944328.表示变量y指向的list对象[1,2,3]的id
+x.append(4)        #变量x指向的list对象[1,2,3]附加一个元素4
+x                  #输出:[1,2,3,4].表示变量x指向的list对象[1,2,3,4]
+id(x)              #输出:1656936944328.变量x指向的list对象[1,2,3,4]的id未改变
+x is y             #输出:True.表示变量x和y指向同一个list对象[1,2,3,4]
+x == y             #输出:True.表示变量x和y指向的list对象值相等
+z = [1,2,3,4]      #变量z指向的list对象[1,2,3,4]
+id(z)              #输出:1656965757064.表示变量z指向的list对象[1,2,3,4]的id
+x is z             #输出:False.表示变量x和z指向不同的list对象[1,2,3,4]
+x == z             #输出:True.表示变量x和z指向的list对象值相等
+&lt;/code&gt;&lt;/pre&gt;
+">Python对象和引用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/python/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://LXMplus.github.io/post-images/1671879732677.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;语言基础&#34;&gt;语言基础&lt;/h3&gt;
+&lt;h4 id=&#34;python对象和引用&#34;&gt;&lt;a href=&#34;https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong&#34;&gt;Python对象和引用&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;标识符及其命名规则&#34;&gt;&lt;a href=&#34;https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze&#34;&gt;标识符及其命名规则&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;变量和赋值语句&#34;&gt;&lt;a href=&#34;https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju&#34;&gt;变量和赋值语句&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;表达式和运算符&#34;&gt;&lt;a href=&#34;https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu&#34;&gt;表达式和运算符&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;基础知识&#34;&gt;基础知识&lt;/h4&gt;
+&lt;h3 id=&#34;常用内置数据类型&#34;&gt;常用内置数据类型&lt;/h3&gt;
+&lt;h4 id=&#34;内置数据类型概述&#34;&gt;内置数据类型概述&lt;/h4&gt;
+">Python Catalogue</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://LXMplus.github.io/post/about/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://LXMplus.github.io/post-images/1671880932265.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里是博主书写编程知识的小站~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+
+  <script src="/media/js/cool.js"></script>
+
+
+
+  <div class="snow-container"></div>
+  <script color="0,205,205" pointer-events="auto" zIndex="-1" opacity='0.7' count="99" src="/media/js/bg/canvas-nest.js"></script>
+
+
+</html>

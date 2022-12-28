@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://LXMplus.github.io</id>
+    <title>LXM&apos;s Blog</title>
+    <updated>2022-12-28T14:56:55.040Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://LXMplus.github.io"/>
+    <link rel="self" href="https://LXMplus.github.io/atom.xml"/>
+    <subtitle>正在作业中 · · · · · · </subtitle>
+    <logo>https://LXMplus.github.io/images/avatar.png</logo>
+    <icon>https://LXMplus.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, LXM&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[表达式和运算符]]></title>
+        <id>https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu/</id>
+        <link href="https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu/">
+        </link>
+        <updated>2022-12-24T13:10:34.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="表达式的组成">表达式的组成</h3>
+<p>表达式是可以计算的代码片段，由操作数和运算符构成。操作数、运算符和圆括号按一定的规则组成表达式。<strong>表达式通过运算后产生运算结果，返回结果对象</strong>。运算结果对象的类型由操作数和运算符共同决定。运算符表明对操作数进行什么样的运算。运算符包括<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>等。操作数包括文本常量(没有名称的常数值，例如1、&quot;abc&quot;)、变量(例如i=123)、类的成员变量/函数(例如math.pi、math. sin(x))等，也可以包含子表达式(例如(2**10))。</p>
+<p>表达式既可以非常简单，也可以非常复杂。当表达式包含多个运算符时，运算符的优先级控制各个运算符的计算顺序。例如，表达式<code>x+y*z</code>按<code>x+(y*z)</code>计算，因为<code>*</code>运算符的优先级高于<code>+</code>运算符。</p>
+<p>【实例】表达式示例。</p>
+<pre><code class="language-Python">import math           #导入math模块
+a = 2;b = 10          #变量a指向int对象2,变量b指向int对象10
+a+b                   #输出:12
+math.pi               #输出:3.141592653589793
+math.sin(math.pi/2)   #输出1.0
+</code></pre>
+<h3 id="表达式的书写规则">表达式的书写规则</h3>
+<p>Python表达式遵循下列书写规则。</p>
+<p>(1)表达式从左到右在同一个基准上书写。例如，数学公式 a2+b2 应该写为 。a<strong>2+b</strong>2。</p>
+<p>(2)乘号不能省略。例如，数学公式ab(表示a乘以b)应写为a*b。</p>
+<p>(3)括号必须成对出现，而且只能使用圆括号；圆括号可以嵌套使用。</p>
+<p>【实例】复杂表达式示例。数学表达式 1/2sin⁡[a(x+1)+b] 写成Python表达式为</p>
+<pre><code class="language-Python">math.sin(a*(x+1)+b)/2
+</code></pre>
+<h3 id="运算符概述">运算符概述</h3>
+<p>Python运算符用于在表达式中对一个或多个操作数进行计算并返回结果值，接受一个操作数的运算符被称作一元运算符，例如正负号运算符<code>+</code>或<code>-</code>；接受两个操作数的运算符被称作二元运算符，例如算术运算符<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>等。如果一个表达式中包含多个运算符，则计算顺序取决于运算符的结合顺序和优先级。优先级高的运算符优先计算，例如，在1+2*3中*的优先级比+高，故先计算2*3。同一优先级的运算符按结合顺序依次计算，例如+、-(以及*、/)为同一优先级左结合的运算符，故1+2-3等同于(1+2)-3；2*4/2等同于(2*4)/2。注意，<strong>赋值运算符=为右结合运算符</strong>，故a=b=c等同于a=(b=c)。用户可以使用圆括号“<code>()</code>”强制改变运算顺序。</p>
+<p>【实例】表达式中运算符的优先级示例。</p>
+<pre><code class="language-Python">11 + 22 * 3      #输出:77
+(11 + 22) * 3    #输出:99
+</code></pre>
+<h3 id="python运算符">Python运算符</h3>
+<p>Python语言定义了许多运算符，按优先顺序排列如表所示。通过运算符重载(overload)可以为用户自定义的类型定义新的运算符。</p>
+<h4 id="算术运算符">算术运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">相加</td>
+<td style="text-align:center">a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">相减</td>
+<td style="text-align:center">a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">相乘</td>
+<td style="text-align:center">a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">相除</td>
+<td style="text-align:center">a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">取模</td>
+<td style="text-align:center">a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">幂</td>
+<td style="text-align:center">a**b 表示 a 的 b 次幂</td>
+</tr>
+<tr>
+<td style="text-align:center">//</td>
+<td style="text-align:center">取整除</td>
+<td style="text-align:center">9 // 4 结果为 2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="比较运算符">比较运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:center">是否相等</td>
+<td style="text-align:center">a == b</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">是否不等于</td>
+<td style="text-align:center">a != b</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">是否大于</td>
+<td style="text-align:center">a &gt; b</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">是否小于</td>
+<td style="text-align:center">a&lt;b</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">是否大于等于</td>
+<td style="text-align:center">a &gt;= b</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">是否小于等于</td>
+<td style="text-align:center">a &lt;= b</td>
+</tr>
+</tbody>
+</table>
+<h4 id="赋值运算符">赋值运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">简单的赋值运算符</td>
+<td style="text-align:center">a = b + c</td>
+</tr>
+<tr>
+<td style="text-align:center">+=</td>
+<td style="text-align:center">加法赋值运算符</td>
+<td style="text-align:center">a += b 等效于 a = a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-=</td>
+<td style="text-align:center">减法赋值运算符</td>
+<td style="text-align:center">a -= b 等效于 a = a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*=</td>
+<td style="text-align:center">乘法赋值运算符</td>
+<td style="text-align:center">a *= b 等效于 a = a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/=</td>
+<td style="text-align:center">除法赋值运算符</td>
+<td style="text-align:center">a /= b 等效于 a = a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">%=</td>
+<td style="text-align:center">取模赋值运算符</td>
+<td style="text-align:center">a %= b 等效于 a = a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**=</td>
+<td style="text-align:center">幂赋值运算符</td>
+<td style="text-align:center">a **= b 等效于 a = a ** b</td>
+</tr>
+<tr>
+<td style="text-align:center">//=</td>
+<td style="text-align:center">取整除赋值运算符</td>
+<td style="text-align:center">a //= b 等效于 a = a // b</td>
+</tr>
+</tbody>
+</table>
+<h4 id="逻辑运算符">逻辑运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">and</td>
+<td style="text-align:center">布尔类型与</td>
+<td style="text-align:center">a and b</td>
+</tr>
+<tr>
+<td style="text-align:center">or</td>
+<td style="text-align:center">布尔类型或</td>
+<td style="text-align:center">a or b</td>
+</tr>
+<tr>
+<td style="text-align:center">not</td>
+<td style="text-align:center">布尔类型非</td>
+<td style="text-align:center">not a</td>
+</tr>
+</tbody>
+</table>
+<h4 id="位运算符">位运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">按位与运算符。参与运算的两个值，如果两个相应位都为1，那么该位的结果就为1，否则为0</td>
+<td style="text-align:center">60&amp;13输出结果为12，二进制为0000 1100</td>
+</tr>
+<tr>
+<td style="text-align:center">|</td>
+<td style="text-align:center">按位或运算符。只要对应的两个二进制位有一个为1，结果就为1</td>
+<td style="text-align:center">60|13输出结果为61，二进制为0011 1101</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">按位异或运算符。当两个二进制位相异时，结果为1</td>
+<td style="text-align:center">60^13输出结果为49，二进制为0011 0001</td>
+</tr>
+<tr>
+<td style="text-align:center">~</td>
+<td style="text-align:center">按位取反运算符。对数据的每个二进制位取反，即把1变为0，把0变为1</td>
+<td style="text-align:center">~60输出结果为-61，二进制为1100 0011</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;</td>
+<td style="text-align:center">左移动运算符。将二进制位全部左移若干位，由&quot;&lt;&lt;&quot;右边的数指定移动的位数，高位丢弃，低位补0</td>
+<td style="text-align:center">60&lt;&lt;2输出结果为240，二进制为1111 0000</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;</td>
+<td style="text-align:center">右移动运算符。将二进制位全部右移若干位，由&quot;&gt;&gt;&quot;右边的数指定移动的位数，移动过程中，正数最高位补0，负数最高位补1，无符号数最高位补0</td>
+<td style="text-align:center">60&gt;&gt;2输出结果为15，二进制为0000 1111</td>
+</tr>
+</tbody>
+</table>
+<h4 id="成员运算符">成员运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">in</td>
+<td style="text-align:center">如果在指定的序列（元组或列表）中找到值，就返回True，否则返回False</td>
+<td style="text-align:center">若x在y序列（元组或列表）中，则返回True，否则返回False</td>
+</tr>
+<tr>
+<td style="text-align:center">not in</td>
+<td style="text-align:center">如果在指定的序列（元组或列表）中没有找到值，就返回True，否则返回False</td>
+<td style="text-align:center">若x在y序列（元组或列表）中，则返回False，否则返回True</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-Python">x = 'hello world'
+y = [1,2,3,4]
+print('in运算符:','hello' in x)
+print('not in运算符:',2 not in y)
+</code></pre>
+<p>【程序运行结果如下】</p>
+<pre><code class="language-Python">in运算符: True
+not in运算符: False
+</code></pre>
+<h4 id="身份运算符">身份运算符</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">is</td>
+<td style="text-align:center">判断两个标识符是否引用同一个对象</td>
+<td style="text-align:center">a is b</td>
+</tr>
+<tr>
+<td style="text-align:center">is not</td>
+<td style="text-align:center">判断两个标识符是否引用不同对象</td>
+<td style="text-align:center">a is not b</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-Python">x = 10
+y = 10
+print('is运算符:',x is y)
+y = 20
+print('not is运算符:',x is not y)
+</code></pre>
+<p>【程序运行结果如下】</p>
+<pre><code class="language-Python">is运算符: True
+not is运算符: True
+</code></pre>
+<h4 id="运算符优先级">运算符优先级</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述（由上至下对应优先级由高到低）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">幂运算</td>
+</tr>
+<tr>
+<td style="text-align:center">~ + -</td>
+<td style="text-align:center">取反、正号、负号</td>
+</tr>
+<tr>
+<td style="text-align:center">*  /  %  //</td>
+<td style="text-align:center">乘、除、取模、取整除</td>
+</tr>
+<tr>
+<td style="text-align:center">+ -</td>
+<td style="text-align:center">加法、减法</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt; &lt;&lt;</td>
+<td style="text-align:center">右移、左移</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">与</td>
+</tr>
+<tr>
+<td style="text-align:center">^|</td>
+<td style="text-align:center">异或、或</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;= &lt; &gt; &gt;=</td>
+<td style="text-align:center">比较运算符</td>
+</tr>
+<tr>
+<td style="text-align:center">== !=</td>
+<td style="text-align:center">是否等于、是否不等于</td>
+</tr>
+<tr>
+<td style="text-align:center">=  %= /=  //=  -=  +=  *=  **=</td>
+<td style="text-align:center">赋值运算符</td>
+</tr>
+<tr>
+<td style="text-align:center">is is not</td>
+<td style="text-align:center">身份运算符</td>
+</tr>
+<tr>
+<td style="text-align:center">in not in</td>
+<td style="text-align:center">成员运算符</td>
+</tr>
+<tr>
+<td style="text-align:center">not and or</td>
+<td style="text-align:center">逻辑运算符</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">相加</td>
+<td style="text-align:center">a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">相减</td>
+<td style="text-align:center">a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">相乘</td>
+<td style="text-align:center">a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">相除</td>
+<td style="text-align:center">a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">取模</td>
+<td style="text-align:center">a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">幂</td>
+<td style="text-align:center">a**b 表示 a 的 b 次幂</td>
+</tr>
+<tr>
+<td style="text-align:center">//</td>
+<td style="text-align:center">取整除</td>
+<td style="text-align:center">9 // 4 结果为 2</td>
+</tr>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:center">是否相等</td>
+<td style="text-align:center">a == b</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">是否不等于</td>
+<td style="text-align:center">a != b</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">是否大于</td>
+<td style="text-align:center">a &gt; b</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">是否大于等于</td>
+<td style="text-align:center">a &gt;= b</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">是否小于等于</td>
+<td style="text-align:center">a &lt;= b</td>
+</tr>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">简单的赋值运算符</td>
+<td style="text-align:center">a = b + c</td>
+</tr>
+<tr>
+<td style="text-align:center">+=</td>
+<td style="text-align:center">加法赋值运算符</td>
+<td style="text-align:center">a += b 等效于 a = a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-=</td>
+<td style="text-align:center">减法赋值运算符</td>
+<td style="text-align:center">a -= b 等效于 a = a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*=</td>
+<td style="text-align:center">乘法赋值运算符</td>
+<td style="text-align:center">a *= b 等效于 a = a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/=</td>
+<td style="text-align:center">除法赋值运算符</td>
+<td style="text-align:center">a /= b 等效于 a = a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">%=</td>
+<td style="text-align:center">取模赋值运算符</td>
+<td style="text-align:center">a %= b 等效于 a = a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**=</td>
+<td style="text-align:center">幂赋值运算符</td>
+<td style="text-align:center">a **= b 等效于 a = a ** b</td>
+</tr>
+<tr>
+<td style="text-align:center">//=</td>
+<td style="text-align:center">取整除赋值运算符</td>
+<td style="text-align:center">a //= b 等效于 a = a // b</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">与</td>
+<td style="text-align:center">a &amp; b</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">或</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">异或</td>
+<td style="text-align:center">a ^ b</td>
+</tr>
+<tr>
+<td style="text-align:center">~</td>
+<td style="text-align:center">取反</td>
+<td style="text-align:center">~a</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;</td>
+<td style="text-align:center">左移动</td>
+<td style="text-align:center">a &lt;&lt; 3</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;</td>
+<td style="text-align:center">右移动</td>
+<td style="text-align:center">a &gt;&gt; 3</td>
+</tr>
+<tr>
+<td style="text-align:center">and</td>
+<td style="text-align:center">布尔类型与</td>
+<td style="text-align:center">a and b</td>
+</tr>
+<tr>
+<td style="text-align:center">or</td>
+<td style="text-align:center">布尔类型或</td>
+<td style="text-align:center">a or b</td>
+</tr>
+<tr>
+<td style="text-align:center">not</td>
+<td style="text-align:center">布尔类型非</td>
+<td style="text-align:center">not a</td>
+</tr>
+<tr>
+<td style="text-align:center">is</td>
+<td style="text-align:center">判断两个标识符是否引用同一个对象</td>
+<td style="text-align:center">a is b</td>
+</tr>
+<tr>
+<td style="text-align:center">is not</td>
+<td style="text-align:center">判断两个标识符是否引用不同对象</td>
+<td style="text-align:center">a is not b</td>
+</tr>
+</tbody>
+</table>
+<h3 id="混合运算和数值类型转换">混合运算和数值类型转换</h3>
+<h4 id="隐式转换">隐式转换</h4>
+<blockquote>
+<p><strong>int、float和complex对象可以进行混合运算</strong>。如果表达式中包含complex对象，则其他对象自动转换(隐式转换)为complex对象，结果为complex对象；如果表达式中包含float对象，则其他对象自动转换(隐式转换)为float对象，结果为float对象。</p>
+</blockquote>
+<p>【实例】隐式类型转换示例。</p>
+<pre><code class="language-Python">f=123+1.23
+f             #输出:124.23
+type(f)       #输出:&lt;class'float'&gt;
+123+True      #True转换为1.输出:124
+123+False     #False转换为0.输出:123
+</code></pre>
+<p><strong>！！！注意</strong>：在混合运算中True自动转换为1， False自动转换为0。</p>
+<h4 id="显式转换">显式转换</h4>
+<p>“显式转换”又称为“强制转换”，使用target-type(value)将表达式强制转换为所需的数据类型。如果未定义相应的转换运算符，则强制转换会失败。显式转换实际上使用目标类型的构造函数创建其对象。</p>
+<ul>
+<li>int(x)、float(x)、bool(x)、str(x)分别把对象转换为整数、浮点数、布尔值和字符串。</li>
+</ul>
+<p>【实例】显式类型转换示例。</p>
+<pre><code class="language-Python">int(1.23)       #输出:1
+float(10)       #输出:10.0
+bool(&quot;abc&quot;)     #输出:True
+float(&quot;123xyz&quot;) #报错.ValueError:could not convert string to float:'123xyz
+</code></pre>
+<p>显式数值转换可能导致精度损失，也可能引发异常(例如OverflowError)。例如：</p>
+<pre><code class="language-Python">i=9999**9999
+float(i)   #报错.OverflowError:long int too large to convert to float
+</code></pre>
+<p>【实例】数值数据类型示例(profit.py):计算复利。</p>
+<pre><code class="language-Python">nb=float(input(&quot;请输入本金:&quot;))         #输入本金并转换为浮点数
+nr=float(input(&quot;请输入年利率:&quot;))       #输入年利率并转换为浮点数
+ny=int(input(&quot;请输入年数:&quot;))           #输入年数并转换为整数
+amount= nb * (1+nr/100) ** ny        #计算复利
+print(&quot;本金利率和为:%0.2f&quot;%amount)     #输出复利，保留两位小数
+</code></pre>
+<p>【程序运行结果如下】</p>
+<pre><code class="language-Python">请输入本金:1000
+请输入年利率：6
+请输入年数：10
+本金利率和为:1790.85
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[变量和赋值语句]]></title>
+        <id>https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju/</id>
+        <link href="https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju/">
+        </link>
+        <updated>2022-12-24T11:32:03.000Z</updated>
+        <content type="html"><![CDATA[<p>计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。计算机程序处理的数据必须放入内存。机器语言和汇编语言直接通过内存地址访问这些数据，而高级语言则通过内存单元命名(即变量)来访问这些数据。</p>
+<blockquote>
+<p>在Python 3中一切皆为对象。对象是某个类(类型)的实例，对象由唯一的id标识。对象可以通过标识符来引用，对象引用即指向具体对象实例的标识符，也称之为“变量”。</p>
+</blockquote>
+<h3 id="变量的声明和赋值">变量的声明和赋值</h3>
+<p>变量的声明和赋值用于把一个变量绑定到某个对象，其语法格式如下：</p>
+<pre><code class="language-Python">变量名 = 字面量或表达式
+</code></pre>
+<p>最简单的表达式是字面量，Python基于字面量的值创建一个对象，并绑定到变量；对于复杂的表达式， Python先求值表达式，然后返回表达式结果对象，并绑定到变量。</p>
+<p>Python变量被访问之前必须初始化，即赋值(绑定到某个对象)，否则会报错。</p>
+<p>【实例】变量的声明和赋值示例。</p>
+<pre><code class="language-Python">x=0;y=0;z=0         #变量x、y和z均指向int对象0
+str1 = &quot;abc&quot;        #变量strl指向值为&quot;abc&quot;的str型实例对象
+aFloat              #变量aFloat未声明和定义(NameError:name'aFloat'is not defined)
+</code></pre>
+<h3 id="链式赋值语句">链式赋值语句</h3>
+<p>链式赋值(chained assignment)的语句形式如下：</p>
+<pre><code class="language-Python">变量1=变量2=表达式
+#**等价于**
+变量2=表达式
+变量1=变量2
+</code></pre>
+<p>链式赋值用于多个变量赋同一个值：</p>
+<pre><code class="language-Python">x = y = 123      #变量x和y均指向int对象123
+x                #输出：123
+y                #输出：123
+</code></pre>
+<h3 id="复合赋值语句">复合赋值语句</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>描述</strong></th>
+<th style="text-align:center"><strong>实例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+=</td>
+<td style="text-align:center">加法赋值运算符</td>
+<td style="text-align:center">a += b 等价于 a = a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-=</td>
+<td style="text-align:center">减法赋值运算符</td>
+<td style="text-align:center">a -= b 等价于 a = a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*=</td>
+<td style="text-align:center">乘法赋值运算符</td>
+<td style="text-align:center">a *= b 等价于 a = a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/=</td>
+<td style="text-align:center">除法赋值运算符</td>
+<td style="text-align:center">a /= b 等价于 a = a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">//=</td>
+<td style="text-align:center">整除赋值运算符</td>
+<td style="text-align:center">a //= b 等价于 a = a // b</td>
+</tr>
+<tr>
+<td style="text-align:center">%=</td>
+<td style="text-align:center">取余赋值运算符</td>
+<td style="text-align:center">a %= b 等价于 a = a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**=</td>
+<td style="text-align:center">幂赋值运算符</td>
+<td style="text-align:center">a **= b 等价于 a = a ** b</td>
+</tr>
+</tbody>
+</table>
+<h3 id="删除变量">删除变量</h3>
+<blockquote>
+<p>用户可以使用<code>del</code>语句删除不在使用的变量。</p>
+</blockquote>
+<p>【实例】删除变量实例。</p>
+<pre><code class="language-Python">x = 1       #变量x指向int对象1
+del x       #删除变量x
+x           #变量x未声明和定义
+</code></pre>
+<h3 id="序列解包赋值">序列解包赋值</h3>
+<blockquote>
+<p>Python支持将序列数据类型解包为对应相同个数的变量。</p>
+</blockquote>
+<p>【实例】序列解包实例。</p>
+<pre><code class="language-Python">a,b = 1,2       #变量a指向int对象1，变量b指向int对象2
+a               #输出：1
+b               #输出：2
+</code></pre>
+<p><strong>！！！注意</strong>：变量的个数必须与序列的元素个数一致，否则会产生错误。例如，对于语句“<code>x,y=(1,2,3)</code>”，由于右侧的元组序列包含3个元素，但是左侧只有两个变量，所以会产生错误。</p>
+<hr>
+<p>如果只需要解包部分值，则可以采用特殊变量“<code>_</code>”。例如：</p>
+<pre><code class="language-Python">_, share, price, _=['ACME',50,102.11,(2018,8,21)]
+share           #输出:50
+price           #输出:102.11
+</code></pre>
+<p>【实例】使用序列解包实现变量交换。</p>
+<pre><code class="language-Python">a,b = (1,2)        #变量a指向int对象1,变量b指向int对象2
+a,b = b,a          #变量a和b的值进行交换
+a                  #输出:2
+b                  #输出:1
+</code></pre>
+<p><strong>说明</strong>：在Python语言中，使用“<code>a,b=b,a</code>”的语句方式可以实现两个变量的值的交换。</p>
+<h3 id="常量">常量</h3>
+<blockquote>
+<p>Python语言不支持常量，即没有语法规则限制改变一个常量的值。Python语言使用约定，声明在程序运行过程中不会改变的变量为常量，通常使用全大写字母(可以使用下画线增加可阅读性)表示常量名。</p>
+</blockquote>
+<p>【实例】常量示例。</p>
+<pre><code class="language-Python">TAX_RATE=0.17      #浮点类型常量TAX_RATE
+PI = 3.14          #浮点类型常量PI
+ECNU='华东师范大学'  #字符串常量ECNU
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[标识符及其命名规则]]></title>
+        <id>https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze/</id>
+        <link href="https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze/">
+        </link>
+        <updated>2022-12-24T08:52:01.000Z</updated>
+        <content type="html"><![CDATA[<p>在Python语言中，包、模块、类、函数、变量等的名称必须为有效的标识符。</p>
+<h3 id="标识符">标识符</h3>
+<p>标识符是变量、函数、类、模块和其他对象的名称。标识符的第一个字符必须是字母、下画线(“<code>_</code>”)，其后的字符可以是字母、下画线或数字。一些特殊的名称，例如if、for等，作为Python语言的保留关键字，不能作为标识符。例如，a_int、a_float、str1、_strname、func1为正确的变量名；而99var、It'sOK、for(关键字)为错误的变量名。</p>
+<p><strong>！！！注意</strong>：<br>
+(1) Python标识符区分大小写。例如：ABC和abc视为不同的名称。<br>
+(2)以双下画线开始和结束的名称通常具有特殊的含义。例如，<code>__init</code>为类的构造函数，一般应避免使用。<br>
+(3)避免使用Python预定义标识符名作为自定义标识符名。例如， Notimplemented、Ellipsis、int、float、list、str、tuple等。</p>
+<h3 id="保留关键字">保留关键字</h3>
+<p>关键字即预定义保留标识符。关键字有特殊的语法含义。关键字不能在程序中用作标识符，否则会产生编译错误。Python 3的关键字如表所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>None</td>
+<td>True</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>and</td>
+<td>as</td>
+<td>assert</td>
+<td>break</td>
+<td>class</td>
+<td>continue</td>
+</tr>
+<tr>
+<td>def</td>
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+<td>except</td>
+<td>finally</td>
+</tr>
+<tr>
+<td>for</td>
+<td>from</td>
+<td>global</td>
+<td>if</td>
+<td>import</td>
+<td>in</td>
+</tr>
+<tr>
+<td>is</td>
+<td>lambda</td>
+<td>nonlocal</td>
+<td>not</td>
+<td>or</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>raise</td>
+<td>return</td>
+<td>try</td>
+<td>while</td>
+<td>with</td>
+<td>yield</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python预定义标识符">Python预定义标识符</h3>
+<p>Python语言中包含许多预定义内置类、异常、函数等，例如float、ArithmeticError、print 等。用户应该避免使用Python预定义标识符名作为自定义标识符名。</p>
+<p>使用Python的内置函数<code>dir(__builtins__)</code>可以查看所有内置的异常名、函数名等。</p>
+<h3 id="命名规则">命名规则</h3>
+<p>Python语言遵循的命名规则如表所示。</p>
+<table>
+<thead>
+<tr>
+<th><strong>类型</strong></th>
+<th><strong>命名规则</strong></th>
+<th><strong>举例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模块/包名</td>
+<td>全小写字母，简单、有意义，如果需要可以使用下画线</td>
+<td>math、sys</td>
+</tr>
+<tr>
+<td>函数名</td>
+<td>全小写字母，可以使用下画线增加可阅读性</td>
+<td>foo()、my_func()</td>
+</tr>
+<tr>
+<td>变量名</td>
+<td>全小写字母，可以使用下画线增加可阅读性</td>
+<td>age、my_var</td>
+</tr>
+<tr>
+<td>类名</td>
+<td>采用PascalCase命名规则，即多个单词组成名称，每个单词除第一个字母大写外其余的字母均小写</td>
+<td>MyClass</td>
+</tr>
+<tr>
+<td>常量名</td>
+<td>全大写字母，可以使用下画线增加可阅读性</td>
+<td>LEFT、TAX_RATE</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python对象和引用]]></title>
+        <id>https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong/</id>
+        <link href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong/">
+        </link>
+        <updated>2022-12-24T08:45:58.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="python对象概述">Python对象概述</h3>
+<p>计算机程序通常用于处理各种类型的数据(即对象)，不同的数据属于不同的数据类型，支持不同的运算操作。<strong>在Python语言中，数据表示为对象</strong>。对象本质上是一个内存块，拥有特定的值，支持特定类型的运算操作。在Python3中，一切皆为对象。Python语言中的每个对象由标识(identity)、类型(type)和值(value)标识。</p>
+<p>(1)<strong>标识</strong>用于唯一地标识一个对象，通常对应对象在计算机内存中的位置。使用内置函数id(obj1)可以返回对象obj1的标识。</p>
+<p>(2)<strong>类型</strong>用于表示对象所属的数据类型(类)，数据类型用于限定对象的取值范围以及允许执行的处理操作。使用内置函数type(obj1)可以返回对象obj1所属的数据类型。</p>
+<p>(3)<strong>值</strong>用于表示对象的数据类型的值。使用内置函数print(obj1)可以返回对象objl的值。</p>
+<blockquote>
+<p>通过内置的<code>type()</code>函数可以判断一个<strong>对象的类型</strong>。通过内置的<code>id()</code>函数可以获取一个<strong>对象唯一的id标识</strong>(CPython的实现为内存存放位置)。</p>
+</blockquote>
+<p>【实例】 使用内置函数type()、id()和print()查看对象。</p>
+<pre><code class="language-Python">123              #输出:123
+id(123)          #输出:140706558370656
+type(123)        #输出:&lt;class'int'&gt;
+print(123)       #输出:123
+</code></pre>
+<p>字面量123创建一个实例对象，其id标识为140706558370656，类型为int类型，值为123。在Python 3中<strong>函数</strong>和<strong>类</strong>等也是对象，也具有相应的类型和id。</p>
+<p>【实例】 查看Python的内置函数对象。</p>
+<pre><code class="language-Python">type(abs)         #输出:&lt;class'builtin function or method'&gt;
+id(abs)           #输出:2529313427104
+type(range)       #输出:&lt;class'type'&gt;
+id(range)         #输出:140706557885440
+</code></pre>
+<h3 id="使用字面量创建实例对象">使用字面量创建实例对象</h3>
+<p>对于内置对象， Python通常提供使用字面量直接创建实例对象的语法。</p>
+<p>Python的数据类型定义了一个值的集合，在Python代码中使用字面量表示某个数据类型的值。例如，12、101等表示int数据类型的值；0.17、3.14等表示float数据类型的值；True和False表示bool数据类型的值；'Hello, World'、'张三'等表示str数据类型的值。字面量在Python语句中解释为表达式， Python基于字面量创建相应的数据类型的对象。</p>
+<p>【实例】 使用字面量创建实例对象。</p>
+<pre><code class="language-Python">123      #输出:123
+&quot;abc&quot;    #输出:'abc'
+</code></pre>
+<p>Python使用字面量123和“abc”分别创建一个int型对象和一个str型对象。</p>
+<h3 id="使用类对象创建实例对象">使用类对象创建实例对象</h3>
+<p>通过直接调用类对象可以创建实例对象，其语法格式如下。</p>
+<pre><code class="language-Python">类对象(参数)
+</code></pre>
+<p>【实例】使用类对象创建实例对象。</p>
+<pre><code class="language-Python">int(12)       #输出:12
+complex(1,2)  #输出:(1+2j)
+</code></pre>
+<p>Python使用int(12)创建一个整数数据类型的实例对象；使用complex(1,2)创建一个复数类型的实例对象。另外，表达式的运算结果也可以创建新的对象；Python语句<strong>def</strong>会创建函数对象；<strong>class</strong>语句会创建类对象。</p>
+<h3 id="数据类型">数据类型</h3>
+<p>在Python语言中，<strong>所有对象都有一个数据类型</strong>。Python数据类型的定义为一个值的集合以及在这个值集上的一组运算操作。</p>
+<p>例如整数数据类型(int)，其值的集合为所有的整数，支持的运算操作包括<code>+</code>(加法)、<code>-</code>(减法)、<code>*</code>(乘法)、<code>//</code>(整除)等，88、1024等都是整数类型数据。</p>
+<p>每个对象存储一个值，例如， int类型的对象可以存储值1234、99或1333。<strong>不同的对象可以存储同一个值</strong>，例如，一个str类型的对象可以存储值<code>'hello'</code>，另一个str类型的对象也可以存储值<code>'hello'</code>。在一个对象上可执行且只允许执行其对应数据类型定义的操作，例如，两个int对象可执行乘法运算，但两个str对象不允许执行乘法运算。</p>
+<p>Python数据类型包括<strong>内置数据类型</strong>和<strong>自定义数据类型</strong>。Python语言提供了丰富的内置数据类型，用于有效地处理各种类型的数据。</p>
+<h3 id="变量和对象的引用">变量和对象的引用</h3>
+<blockquote>
+<p><strong>Python对象</strong>是位于计算机内存中的一个<strong>内存数据块</strong>。为了引用对象，用户必须通过赋值语句把对象赋值给变量(也称之为把对象绑定到变量)。<strong>指向对象的引用即变量</strong>。</p>
+</blockquote>
+<p>【实例】 使用赋值语句把对象绑定到变量。</p>
+<pre><code class="language-Python">a=1     #字面量表达式1创建值为1的int型实例对象，并绑定到变量a
+b=2     #字面量表达式2创建值为2的int型实例对象，并绑定到变量b
+c=a+b   #表达式a+b创建值为3的int型实例对象，并绑定到变量c
+</code></pre>
+<p>Python使用字面量表达式1、2和表达式a+b创建3个整型对象，并使用赋值语句把3个对象分别绑定到变量a、b和c。字面量用于创建值为字面量的对象，即某个数据类型的实例对象；表达式使用运算符实现多个操作数(对象)的运算操作，并返回结果对象。<strong>用户可以把对象通过赋值语句赋值给一个变量，即把对象绑定到一个变量，注意变量名必须为有效的标识符</strong>。</p>
+<p><strong>在Python 3中，作为对象的函数和类等也可以通过变量引用</strong>，但这样的引用一般意义不大，建议直接使用函数/类，以提高程序的可读性。例如：</p>
+<pre><code class="language-Python">x=abs
+x(−123)                    #输出:123
+y=str
+id(y)                      #输出:140706557890640
+y.format('{0:.2f}',123)    #输出:'123.00'
+</code></pre>
+<h3 id="python是动态类型语言">Python是动态类型语言</h3>
+<blockquote>
+<p>Python是动态类型语言，即变量不需要显式声明数据类型。根据变量的赋值， Python解释器自动确定其数据类型。事实上，变量仅用于指向某个类型对象，因此变量可以不限定类型，即可以指向任何类型的对象。通过标识符和赋值运算符(<code>=</code>)可以指定某个变量指向某个对象，即引用该对象。<strong>多个变量可以引用同一个对象，一个变量也可以改变指向其他的对象</strong>。</p>
+</blockquote>
+<p>【实例】变量的动态类型示例。</p>
+<pre><code class="language-Python">type(123)      #输出:&lt;class'int'&gt;
+id(123)        #输出:140706558370656
+a = 123
+id(a)          #输出:140706558370656
+b = 123
+id(b)          #输出:140706558370656
+c = a
+id(c)          #输出:140706558370656
+id('abc')      #输出:2529314137232
+a = 'abc'
+id(a)          #输出:2529314137232
+</code></pre>
+<p>123为类int的对象实例，其id为140706558370656；a=123,即变量a指向(引用)对象实例123，故其id也为140706558370656；b=123，即变量b也指向(引用)对象实例123，故其id也为140706558370656；c=a，变量c和变量a一样,指向(引用)对象实例123，其id同样为140706558370656。a='abc'，变量a指向(引用)对象实例'abc'，其id为2529314137232。</p>
+<h3 id="python是强类型语言">Python是强类型语言</h3>
+<blockquote>
+<p>Python是一种强类型语言，每个变量指向的对象均属于某个数据类型，即只支持该类型允许的运算操作。</p>
+</blockquote>
+<p>【实例】变量的强数据类型示例。</p>
+<pre><code class="language-Python">a=1           #a指向值为1的int型实例对象
+b= &quot;11&quot;       #b指向值为&quot;11&quot;的str型实例对象
+a+b           #错误：int型和str型对象不能直接相加，即str型对象不能自动转换为int型对象
+</code></pre>
+<h3 id="对象内存示意图">对象内存示意图</h3>
+<blockquote>
+<p>Python程序运行时会在内存中创建各种对象(位于堆内存中)，通过赋值语句可以将对象绑定到变量(位于栈内存中)，从而通过变量引用对象进行各种操作。<strong>多个变量可以引用同一个对象</strong>。<strong>如果一个对象不再被任何有效作用域中的变量引用，则会通过自动垃圾回收机制回收该对象占用的内存</strong>。</p>
+</blockquote>
+<p>【实例】变量增量运算示例以及相应的对象内存示意图。</p>
+<pre><code class="language-Python">i=100
+i=i+1
+</code></pre>
+<p>第1条语句，创建一个值为100的int对象，并绑定到变量i；第2条语句，先计算表达式i+1的值，然后创建一个值为101的int对象，并绑定到变量i。注意：在执行完第2条语句后，内存中存在3个int对象，即100、1和101，变量i引用对象101，其他两个对象没有被任何变量引用，将被自动垃圾回收器回收。</p>
+<p>【实例】交换两个变量的示例。</p>
+<pre><code class="language-Python">a=123   #a指向值为123的int型实例对象
+b=456   #b指向值为456的int型实例对象
+t=a     #变量t和a一样，指向(引用)对象实例123
+a=b     #变量a和b一样，指向(引用)对象实例456
+b=t     #变量b和t一样，指向(引用)对象实例123
+</code></pre>
+<h3 id="对象的值比较和引用判别">对象的值比较和引用判别</h3>
+<blockquote>
+<p>通过<code>==</code>运算符可以判断两个变量指向的对象的值是否相同；通过<code>is</code>运算符可以判断两个变量是否指向同一个对象。</p>
+</blockquote>
+<p>【实例】 对象的值比较(==)和引用判别(is)示例。</p>
+<pre><code class="language-Python">x = 'abc'      #x指向值为&quot;abc&quot;的str型实例对象
+y = x          #变量y和x一样，指向(引用)对象实例&quot;abc&quot;
+z = 'abcd'     #z指向值为&quot;abcd&quot;的str型实例对象
+x == y         #输出:True
+x is y         #输出:True
+x == z         #输出:False
+x is z         #输出:False
+</code></pre>
+<h3 id="不可变对象和可变对象">不可变对象和可变对象</h3>
+<p>Python 3对象可以分为不可变对象(immutable)和可变对象(mutable)。</p>
+<p>不可变对象一旦创建，其值就不能被修改；可变对象的值可以被修改。Python对象的可变性取决于其数据类型的设计，即是否允许改变其值。</p>
+<blockquote>
+<p>Python中的大部分对象都是不可变对象，例如bool、int、float、str、complex、tuple等。变量是指向某个对象的引用，多个变量可以指向同一个对象。给变量重新赋值，并不改变原始对象的值，只是创建一个新对象，并指向该变量。</p>
+</blockquote>
+<p>【实例】 不可变对象示例。</p>
+<pre><code class="language-Python">a = 18         #变量a指向int对象18
+id(a)          #输出:140706365363776.表示a指向的int对象18的id
+a = 25         #变量a指向int对象25
+id(a)          #输出:140706365364000.表示a指向的int对象25的id
+b = 25         #变量b指向int对象25
+id(b)          #输出:140706365364000.表示b指向的int对象25的id
+id(25)         #输出:140706365364000.表示int对象25的id
+</code></pre>
+<hr>
+<blockquote>
+<p>对象本身的值可以改变的对象称为可变对象(例如set、list、dict等)。</p>
+</blockquote>
+<p>【实例2.13】可变对象示例。</p>
+<pre><code class="language-Python">x = y = [1,2,3]    #变量x和y指向list对象[1,2,3]
+id(x)              #输出:1656936944328.表示变量x指向的list对象[1,2,3]的id
+id(y)              #输出:1656936944328.表示变量y指向的list对象[1,2,3]的id
+x.append(4)        #变量x指向的list对象[1,2,3]附加一个元素4
+x                  #输出:[1,2,3,4].表示变量x指向的list对象[1,2,3,4]
+id(x)              #输出:1656936944328.变量x指向的list对象[1,2,3,4]的id未改变
+x is y             #输出:True.表示变量x和y指向同一个list对象[1,2,3,4]
+x == y             #输出:True.表示变量x和y指向的list对象值相等
+z = [1,2,3,4]      #变量z指向的list对象[1,2,3,4]
+id(z)              #输出:1656965757064.表示变量z指向的list对象[1,2,3,4]的id
+x is z             #输出:False.表示变量x和z指向不同的list对象[1,2,3,4]
+x == z             #输出:True.表示变量x和z指向的list对象值相等
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Catalogue]]></title>
+        <id>https://LXMplus.github.io/post/python/</id>
+        <link href="https://LXMplus.github.io/post/python/">
+        </link>
+        <updated>2020-01-01T09:05:04.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://LXMplus.github.io/post-images/1671879732677.png" alt="" loading="lazy"></figure>
+<h3 id="语言基础">语言基础</h3>
+<h4 id="python对象和引用"><a href="https://LXMplus.github.io/post/python-dui-xiang-he-yin-yong">Python对象和引用</a></h4>
+<h4 id="标识符及其命名规则"><a href="https://LXMplus.github.io/post/biao-shi-fu-ji-qi-ming-ming-gui-ze">标识符及其命名规则</a></h4>
+<h4 id="变量和赋值语句"><a href="https://LXMplus.github.io/post/bian-liang-he-fu-zhi-yu-ju">变量和赋值语句</a></h4>
+<h4 id="表达式和运算符"><a href="https://LXMplus.github.io/post/biao-da-shi-he-yun-suan-fu">表达式和运算符</a></h4>
+<h4 id="基础知识">基础知识</h4>
+<h3 id="常用内置数据类型">常用内置数据类型</h3>
+<h4 id="内置数据类型概述">内置数据类型概述</h4>
+]]></content>
+    </entry>
+</feed>
